@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="production/css/main.css">
+    <title>WorkShop SASS </title>
+</head>
+<body>
+    <main class="container">
+        <h1>Workshop Sass</h1>
+        <section id="introduccion" class="row">
+            <h3>Sass (Syntactically Awesome StyleSheets)</h3>
+            <article id="super-css" class="col s8">
+                <h5>Hojas de estilo con superpoderes</h5>
+                <p class="">Sass es una extensión de css que agrega capacidad al lenguaje de utilizar herramientas que aún o están soportadas en el leguaje</p>
+                <p class="">Por ejemplo: <b>Variables, reglas anidadas, mixins(como funciones en css), importar reglas de estilos "en linea"</b></p>
+                <p class="">Para utilizar sass podemos utilizar dos tipos de <b>sintaxis</b>: SCSS (Sassy CSS) y SASS</p>
+                <h6 class="">SCSS: (Sassy CSS)</h6>
+                <p class="">Esta sintaxis es sumamente parecida a la de css sin sass, una de sus mayores ventajas es que es reconocida por todos los navegadores, incluido internet explorer en antiguos navegagodes.
+                    En teoría todo archivo de css puede ser potencialmente un archivo de scss. 
+                </p>
+                <h6>¿Cual es su sintaxis?</h6>
+                <p>
+                    Identificamos la sintaxis de un archivo scss pues las reglas de estilo están agrupadas entre llaves
+                </p>
+                <code style="font-family:'monospace'; font-weight:'800'">
+                    .container{ <br>
+                        <span class="white-text">__</span>color:"black"; <br>
+                        <span class="white-text">__</span>backgroud-color:"white";<br>
+                    }
+                </code> 
+                <h6 class="">Sass</h6>
+                <p class="">
+                    La sintaxis de sass permite trabajar las reglas de estilo a través de indentación.
+                </p>
+                <h6>¿Cual es su sintaxis?</h6>
+                <code style="font-family:'monospace'; font-weight:'800'">
+                    .container <br>
+                        <span class="white-text">__</span>color:"black" <br>
+                        <span class="white-text">__</span>backgroud-color:"white"<br>
+                </code>                
+
+            </article>
+        </section>
+        <section id="instalacion">
+            <h4>Instalación</h4>
+            <h6>Windows</h6>
+            <p>
+                En primer lugar debes recordar que sass es una gema de Ruby (un componente de ese lenguaje)
+                Por tanto, antes que hacer cualquier cosa, debemos instalar Ruby en nuestros equipos. 
+                <ul>
+                    <li><a rel="stylesheet" href="http://rubyinstaller.org/">Instalador de Ruby en Windows</a></li>
+                    <li><a rel="stylesheet" href="https://www.impressivewebs.com/sass-on-windows/">Tutorial de instalación de Ruby en Windows</a></li>
+                </ul>
+            </p>
+            <h4>Configurando un archivo de sass</h4>
+                <ol>
+                    <li>En tu command prompt navega hasta la carpeta donde se encuentra tu proyecto (usa el comando cd)</li>
+                    <li>En la carpeta de tu proyecto build crea un archivo con extensión .scss (touch main.scss)</li>
+                            <li>Este archivo será el que sea preprocesado con SASS</li>
+                    <li>Ahora vamos a observar los cambios que se hagan en ese archivo principal</li>
+                    <quote>
+                        sass --watch main.scss:../production/css/main.css</li>
+                    </quote> 
+                    <sub>al hacer esto estamos creando un nuevo archivo main.css en la carpeta de producción de nuestro proyecto</sub>
+                </ol>
+                <h5>Ahora, podemos comenzar a escribir con sass los estilos de nuestro proyecto.</h5>
+        </section>
+        <section id="escribiedo-sass">
+            <h4>Variables</h4>
+            <br>
+            <h4>Anidamiento</h4>
+            <br>
+            <h4>Imports</h4>
+            <br>
+            <h4>Mixin</h4>
+        </section>
+    </main>
+</body>
+</html>
