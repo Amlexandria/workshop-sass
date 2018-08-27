@@ -13,7 +13,7 @@
         <h1>Workshop Sass</h1>
         <section id="introduccion" class="row">
             <h3>Sass (Syntactically Awesome StyleSheets)</h3>
-            <article id="super-css" class="col s8">
+            <article id="super-css" class="col s12">
                 <h5>Hojas de estilo con superpoderes</h5>
                 <p class="">Sass es una extensión de css que agrega capacidad al lenguaje de utilizar herramientas que aún o están soportadas en el leguaje</p>
                 <p class="">Por ejemplo: <b>Variables, reglas anidadas, mixins(como funciones en css), importar reglas de estilos "en linea"</b></p>
@@ -45,48 +45,50 @@
 
             </article>
         </section>
-        <section id="instalacion">
-            <h4>Instalación</h4>
-            <h6>Windows</h6>
-            <p>
-                En primer lugar debes recordar que sass es una gema de Ruby (un componente de ese lenguaje)
-                Por tanto, antes que hacer cualquier cosa, debemos instalar Ruby en nuestros equipos. 
-                <ul>
-                    <li><a rel="stylesheet" href="http://rubyinstaller.org/">Instalador de Ruby en Windows</a></li>
-                    <li><a rel="stylesheet" href="https://www.impressivewebs.com/sass-on-windows/">Tutorial de instalación de Ruby en Windows</a></li>
-                </ul>
-            </p>
-            <p>
-                Una vez que tengas instalado Ruby, podremos instalar SASS
-                <br>
-                <code>
-                    gem install sass
-                </code>
-                Si tu consola te da algún error por permisos intenta de esta forma: 
-                <br>
-                <code> sudo gem install sass</code>
-            </p>
-            <small>Si no se desea utilizar Sass como una gema de Ruby, entonces debe configurarse como una variable 
-                de entorno en tu sistema operativo e instalarse a través del package manager de tu 
-                preferencia(npm, choco, brew) aquí un tutorial para hacerlo de esta forma:
-                 <a href="https://katiek2.github.io/path-doc/">Configurar algo como variable de entorno</a>
-                 <a href="https://sass-lang.com/install">Install Sass (oficial doc latest version) 2. Command Line</a>
-            </small>
-            <h4>Configurando un archivo de sass</h4>
-                <ol>
-                    <li>En tu command prompt navega hasta la carpeta donde se encuentra tu proyecto (usa el comando cd)</li>
-                    <li>En la carpeta de tu proyecto build crea un archivo con extensión .scss (touch main.scss)</li>
-                            <li>Este archivo será el que sea preprocesado con SASS</li>
-                    <li>Ahora vamos a observar los cambios que se hagan en ese archivo principal</li>
-                    <quote id="create-main-css">
-                        sass --watch archivo_scss_o_sass_fuente.scss:archivo_destino_css_a_produccion.css
-                        sass --watch css/main.scss:production/css/main.css                    </quote> 
-                    <sub>al hacer esto estamos creando un nuevo archivo main.css en la carpeta de producción de nuestro proyecto</sub>
-                </ol>
-                <h5>Ahora, podemos comenzar a escribir con sass los estilos de nuestro proyecto.</h5>
+        <section id="instalacion" class="row">
+            <article class="col s12">
+                    <h4>Instalación</h4>
+                    <h6>Windows</h6>
+                    <p>
+                        En primer lugar debes recordar que sass es una gema de Ruby (un componente de ese lenguaje)
+                        Por tanto, antes que hacer cualquier cosa, debemos instalar Ruby en nuestros equipos. 
+                        <ul>
+                            <li><a rel="stylesheet" href="http://rubyinstaller.org/">Instalador de Ruby en Windows</a></li>
+                            <li><a rel="stylesheet" href="https://www.impressivewebs.com/sass-on-windows/">Tutorial de instalación de Ruby en Windows</a></li>
+                        </ul>
+                    </p>
+                    <p>
+                        Una vez que tengas instalado Ruby, podremos instalar SASS
+                        <br>
+                        <code>
+                            gem install sass
+                        </code>
+                        Si tu consola te da algún error por permisos intenta de esta forma: 
+                        <br>
+                        <code> sudo gem install sass</code>
+                    </p>
+                    <small>Si no se desea utilizar Sass como una gema de Ruby, entonces debe configurarse como una variable 
+                        de entorno en tu sistema operativo e instalarse a través del package manager de tu 
+                        preferencia(npm, choco, brew) aquí un tutorial para hacerlo de esta forma:
+                         <a href="https://katiek2.github.io/path-doc/">Configurar algo como variable de entorno</a>
+                         <a href="https://sass-lang.com/install">Install Sass (oficial doc latest version) 2. Command Line</a>
+                    </small>
+                    <h4>Configurando un archivo de sass</h4>
+                        <ol>
+                            <li>En tu command prompt navega hasta la carpeta donde se encuentra tu proyecto (usa el comando cd)</li>
+                            <li>En la carpeta de tu proyecto build crea un archivo con extensión .scss (touch main.scss)</li>
+                                    <li>Este archivo será el que sea preprocesado con SASS</li>
+                            <li>Ahora vamos a observar los cambios que se hagan en ese archivo principal</li>
+                            <quote id="create-main-css">
+                                sass --watch archivo_scss_o_sass_fuente.scss:archivo_destino_css_a_produccion.css
+                                sass --watch css/main.scss:production/css/main.css                    </quote> 
+                            <sub>al hacer esto estamos creando un nuevo archivo main.css en la carpeta de producción de nuestro proyecto</sub>
+                        </ol>
+                        <h5>Ahora, podemos comenzar a escribir con sass los estilos de nuestro proyecto.</h5>
+            </article>
         </section>
-        <section id="escribiedo-sass">
-            <article id="variables">
+        <section id="escribiedo-sass" class="row">
+            <article id="variables" class="col s12 ">
                 <h4>Variables</h4>
                 <hr>
                 Las variables en SASS son una forma de almacenar valores de CSS 
@@ -130,7 +132,7 @@
                 </code>
 
             </article>
-            <article id="nesting-sass">
+            <article id="nesting-sass" class="col s12 ">
                 <h4>Anidamiento || Nesting</h4>
                 <hr>
                 <p>
@@ -161,28 +163,30 @@
                     }<br>                        
                 </code>
             </article>
-            <article class="partials">
-                <h4>Partials || Archivos Parciales</h4>
-                <hr>
+            <article class="partials" class="col s12 ">
+              <h4>Partials || Archivos Parciales</h4>
+              <hr>
                 <quote>Pero Meme, que pasa si tengo 50 variables y aparte 50 mixins y resulta que son para cosas distintas.
                  Existe alguna forma de <em>Modularizar</em> mis hojas de CSS con SASS</quote>
                  <p>Sí, así es.
                     Puedes crear un archivo parcial para "hacer módulos" de tus hojas de estilo
                  </p>
-                 <p>Lo unico que Sass te pide es que los nombre con un guión bajo al inicio, algo así: <em>_colors.scss</em></p>
-                 <p>y después lo importes al archivo principal de tus estilos (en este caso main.scss) de la siguiente forma <br>
-                <code>@import "colors";</code></p>
+                 <p>Lo unico que Sass te pide es que los nombre con un guión bajo al inicio, algo así:
+                    <em>_colors.scss</em>
+                 </p>
+                 <p>y después lo importes al archivo principal de tus estilos (en este caso main.scss) de la siguiente forma
+                <code>@import "colors";</code>
+                 </p>
                 ¿@import? Okay, eso luce extraño, explicame que es, por favor :) . 
             </article>
-            <article id="imports">
+            <article id="imports" class="col s12">
                 <h4>Imports</h4>
                 <hr>  
                 <p>
                     Como decía anteriormente, sass permite dividir tu código de css en pequeñas porciones.
                     lo que hace mucho más mantenible los estilos de tu sitio. <br>
                     Imagina que tienes una landing page en donde tienes 5 secciones, un footer y un header
-                </p>      
-                <p>
+
                     Te piden que modifiques solo el header pero ¡oh sorpresa! tu código de CSS, tiene más
                     de 1500 líneas y la persona desarrolladora que estaba antes de ti era muy desordenada.
                     <b>¡Caos!</b>
@@ -198,13 +202,45 @@
                 </p>
                 <p>
                     Sass es suficientemente inteligente para reconocer que ese será un archivo parcial y llevar esos estilos a la hoja principal. 
-                    <b>¡No lo olvides!</b>
-                    <code>@import 'nombre-cool-archivo-parcial';</code>
+                    <b>¡No lo olvides!</b><br>
+                    <code>@import 'nombre-cool-archivo-parcial';</code><br>
                     al inicio de tu archivo principal main.scss        
                 </p>
             </article>
-            <h4>Mixin</h4>
-            <hr>
+            <article id="mixins" class="col s12">
+                <h4>Mixin</h4>
+                <hr>
+                <quote>
+                    ¡Mi parte favorita ha llegado!
+                    ¡Con sass no hay excusa para tener código repetido incluso en CSS!
+                    DRY personas, <b>¡DRY Everywhere!</b>
+                </quote>
+                <p>
+                    Los MIXIN en sass son similares a las funciones que utilizamos en nuestros lenguajes de programación preferidos.
+                    Como bien sabes, las funciones están hechas para agrupar un proceso y obtener un resultado las veces que sean necesarias.
+                    Cuando utilizamos ua función evitamos la penosa necesidad de escribir el mismo código muchas veces y nos limitamos a hacer una llamada
+                    a la función deseada en el momento deseado.
+                </p>
+                <p>
+                   Un mixin te permite hacer grupos de declaraciones en CSS que puedes reutilizar en varias partes de tu sitio.
+                   Incluso te permite pasar valores al Mixin (como los argumentos de una función), para hacer al mixin más flexible.
+                </p>
+                <p>
+                    Hagamos un mixin simple que modifique la fuente, segun el argumento que le enviemos 
+                    <small>(Tal vez este no es el ejemplo más cool de todos pero cuando veamos operadores, podremos hacer uno mucho más completo)</small>
+                </p>
+                <code>
+                    <span class="white-text">__</span>@mixin fuente($value) { <br>
+                    <span class="white-text">____</span>font-family: $value; <br>
+                    <span class="white-text">__</span>} <br>
+                </code>
+                <p>Para hacer uso de nuestro mixin debemos incluirlo en la regla que deseemos</p>
+                <code>
+                    <span class="white-text">__</span>code{ <br>
+                    <span class="white-text">____</span> @include fuente("monospace");<br>
+                    <span class="white-text">__</span>}<br>
+                </code>
+            </article>
         </section>
     </main>
 </body>

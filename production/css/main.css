@@ -1,4 +1,5 @@
 main {
+  font-family: "Times New Roman";
   color: #679A9A;
   background-color: #fff;
 }
@@ -9,6 +10,7 @@ main p, main li {
   color: #263547;
 }
 main code {
+  font-family: "monospace";
   color: #d0398a;
 }
 main hr {

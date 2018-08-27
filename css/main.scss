@@ -1,8 +1,11 @@
 // Variables 
 // -------Project colors------
 @import 'colors';
-
+@mixin fuente($value) {
+    font-family: $value;
+};
 main{
+    @include fuente("Times New Roman");
     color: $emphasis-color-one;
     background-color: $main-color;
     h1{
@@ -12,6 +15,7 @@ main{
         color: $secondary-color;
     }
     code{
+        @include fuente("monospace");
         color: $emphasis-color-two;
     }
     hr{
