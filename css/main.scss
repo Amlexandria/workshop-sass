@@ -1,7 +1,21 @@
 // Import Section
 @import 'colors';
 @import 'mixins';
-
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 0 !important;
+}
+footer{
+    height: 10vh;
+    .footer-copyright > .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:center;
+        height: 10vh;
+    }
+}
 main{
     color: $emphasis-color-one;
     background-color: $main-color;
@@ -18,4 +32,12 @@ main{
     hr{
         border-color: rgba(#d0398a,0.5);
     }
+}
+.sidenav-trigger{
+        /* position: fixed; */
+    /* float: right !important; */
+    /* position: sticky; */
+    position: fixed;
+    left: 87%;
+    top: 20vh;
 }

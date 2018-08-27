@@ -1,3 +1,24 @@
+.sassy-rose {
+  background-color: #d0398a;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding-bottom: 0 !important;
+}
+
+footer {
+  height: 10vh;
+}
+footer .footer-copyright > .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
 main {
   color: #679A9A;
   background-color: #fff;
@@ -14,6 +35,15 @@ main code {
 }
 main hr {
   border-color: rgba(208, 57, 138, 0.5);
+}
+
+.sidenav-trigger {
+  /* position: fixed; */
+  /* float: right !important; */
+  /* position: sticky; */
+  position: fixed;
+  left: 87%;
+  top: 20vh;
 }
 
 /*# sourceMappingURL=main.css.map */

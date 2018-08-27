@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="production/css/main.css">
     <title>WorkShop SASS </title>
 </head>
 <body>
+    <div class="navbar-fixed  hide-on-small-and-down">
+        <nav class="sassy-rose">
+            <div class="nav-wrapper sassy-rose container">
+                <a href="" class="brand-logo left">Sass Workshop</a>
+                <ul id="nav" class="right hide-on-med-and-down">
+                    <li><a href="#">Introducción</a></li>
+                    <li><a href="#instalacion">Instalación</a></li>
+                    <li><a href="#escribiedo-sass" class='dropdown-trigger' href='#' data-target='dropdown-wrSass'>Escribiendo Sass</a></li>
+                    <ul id='dropdown-wrSass' class='dropdown-content'>
+                        <li><a href="#variables">Variables</a></li>
+                        <li><a href="#nesting-sass">Nesting</a></li>
+                        <li><a href="#partials">Archivos Parciales</a></li>
+                        <li><a href="#import">Import</a></li>
+                        <li><a href="#mixin">Mixin</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <a data-target="nav-mobile" class="right sidenav-trigger btn-floating btn-med btn-flat sassy-rose fixed hide-on-med-and-up"><i class="material-icons">menu</i></a>
+    <ul class="sidenav" id="nav-mobile">
+            <li><a href="#" class="sidenav-close">Introducción</a></li>
+            <li><a href="#instalacion" class="sidenav-close">Instalación</a></li>
+            <li><a href="#escribiedo-sass" class="sidenav-close">Escribiendo Sass</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <ul>
+                    <li><a href="#variables" class="sidenav-close">Variables</a></li>
+                    <li><a href="#nesting-sass" class="sidenav-close">Nesting</a></li>
+                    <li><a href="#partials" class="sidenav-close">Archivos Parciales</a></li>
+                    <li><a href="#import" class="sidenav-close">Import</a></li>
+                    <li><a href="#mixin" class="sidenav-close">Mixin</a></li>
+            </ul>    
+    </ul>
     <main class="container">
-        <h1>Workshop Sass</h1>
-        <section id="introduccion" class="row">
+        <section class="row" id="introduccion">
+            <h1>Workshop Sass</h1>
             <h3>Sass (Syntactically Awesome StyleSheets)</h3>
             <article id="super-css" class="col s12">
                 <h5>Hojas de estilo con superpoderes</h5>
@@ -74,20 +110,23 @@
                          <a href="https://sass-lang.com/install">Install Sass (oficial doc latest version) 2. Command Line</a>
                     </small>
                     <h4>Configurando un archivo de sass</h4>
-                        <ol>
-                            <li>En tu command prompt navega hasta la carpeta donde se encuentra tu proyecto (usa el comando cd)</li>
-                            <li>En la carpeta de tu proyecto build crea un archivo con extensión .scss (touch main.scss)</li>
-                                    <li>Este archivo será el que sea preprocesado con SASS</li>
-                            <li>Ahora vamos a observar los cambios que se hagan en ese archivo principal</li>
-                            <quote id="create-main-css">
-                                sass --watch archivo_scss_o_sass_fuente.scss:archivo_destino_css_a_produccion.css
-                                sass --watch css/main.scss:production/css/main.css                    </quote> 
-                            <sub>al hacer esto estamos creando un nuevo archivo main.css en la carpeta de producción de nuestro proyecto</sub>
-                        </ol>
-                        <h5>Ahora, podemos comenzar a escribir con sass los estilos de nuestro proyecto.</h5>
+                    <ul>
+                        <li>En tu command prompt navega hasta la carpeta donde se encuentra tu proyecto (usa el comando cd)</li>
+                        <li>En la carpeta de tu proyecto build crea un archivo con extensión .scss (touch main.scss)</li>
+                                <li>Este archivo será el que sea preprocesado con SASS</li>
+                        <li>Ahora vamos a observar los cambios que se hagan en ese archivo principal</li>
+                    </ul>
+                    <code class="col s12">
+                       "sass --watch css/main.scss:production/css/main.css" <br>
+                    </code>
+                    Al hacer esto estamos creando un nuevo archivo main.css en la carpeta de producción 
+                    de nuestro proyecto
+                    <h5>Ahora, podemos comenzar a escribir con sass los estilos de nuestro proyecto.</h5>
             </article>
         </section>
+        <br><br>
         <section id="escribiedo-sass" class="row">
+            <h3>Escribiendo SASS</h3>
             <article id="variables" class="col s12 ">
                 <h4>Variables</h4>
                 <hr>
@@ -179,7 +218,7 @@
                  </p>
                 ¿@import? Okay, eso luce extraño, explicame que es, por favor :) . 
             </article>
-            <article id="imports" class="col s12">
+            <article id="import" class="col s12">
                 <h4>Imports</h4>
                 <hr>  
                 <p>
@@ -207,7 +246,7 @@
                     al inicio de tu archivo principal main.scss        
                 </p>
             </article>
-            <article id="mixins" class="col s12">
+            <article id="mixin" class="col s12">
                 <h4>Mixin</h4>
                 <hr>
                 <quote>
@@ -256,5 +295,15 @@
                 </article>
         </section>
     </main>
+    <footer class="sassy-rose center">
+        <div class="footer-copyright sassy-rose">
+            <div class="container white-text">
+            <p> Made with &hearts; by Ameli Gavante </p>
+            <a href="https://github.com/memecast/" class="white-text">Github/@memecast</a> 
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
