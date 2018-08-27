@@ -88,7 +88,7 @@
         <section id="escribiedo-sass">
             <article id="variables">
                 <h4>Variables</h4>
-                <br>
+                <hr>
                 Las variables en SASS son una forma de almacenar valores de CSS 
                 que te gustaría reutilizar en algún momento. 
                 Puede ser cualquier cosa: colores, fuentes, valores predeterminados de pocisión, etc.
@@ -132,7 +132,7 @@
             </article>
             <article id="nesting-sass">
                 <h4>Anidamiento || Nesting</h4>
-                <br>
+                <hr>
                 <p>
                         Sass permite anidar selectores en css de la misma forma jerarquica que lo hace HTML.
                         Pero ten cuidado, con este gran poder, viene una gran responsabilidad.
@@ -161,9 +161,50 @@
                     }<br>                        
                 </code>
             </article>
-            <h4>Imports</h4>
-            <br>
+            <article class="partials">
+                <h4>Partials || Archivos Parciales</h4>
+                <hr>
+                <quote>Pero Meme, que pasa si tengo 50 variables y aparte 50 mixins y resulta que son para cosas distintas.
+                 Existe alguna forma de <em>Modularizar</em> mis hojas de CSS con SASS</quote>
+                 <p>Sí, así es.
+                    Puedes crear un archivo parcial para "hacer módulos" de tus hojas de estilo
+                 </p>
+                 <p>Lo unico que Sass te pide es que los nombre con un guión bajo al inicio, algo así: <em>_colors.scss</em></p>
+                 <p>y después lo importes al archivo principal de tus estilos (en este caso main.scss) de la siguiente forma <br>
+                <code>@import "colors";</code></p>
+                ¿@import? Okay, eso luce extraño, explicame que es, por favor :) . 
+            </article>
+            <article id="imports">
+                <h4>Imports</h4>
+                <hr>  
+                <p>
+                    Como decía anteriormente, sass permite dividir tu código de css en pequeñas porciones.
+                    lo que hace mucho más mantenible los estilos de tu sitio. <br>
+                    Imagina que tienes una landing page en donde tienes 5 secciones, un footer y un header
+                </p>      
+                <p>
+                    Te piden que modifiques solo el header pero ¡oh sorpresa! tu código de CSS, tiene más
+                    de 1500 líneas y la persona desarrolladora que estaba antes de ti era muy desordenada.
+                    <b>¡Caos!</b>
+                    <br>
+                    Si tuvieras tu hoja de estilos dividida en archivos parciales, sería mucho más sencillo 
+                    ir al archivo "_header.scss" y darle mantenimiento a ese pequeño pedazo de estilos,
+                    sin tanto peligro de romperlo todo.
+                    <br><br>
+                    Una vez modificados, solo tienes que importar ese archivo parcial en tu hoja de estilos base
+                    a través de la palabra reservada <code>@import</code> seguida del nombre del archivo parcial,
+                    sin el guíon bajo y sin extensión <code>'header'</code>. 
+                    <br>        
+                </p>
+                <p>
+                    Sass es suficientemente inteligente para reconocer que ese será un archivo parcial y llevar esos estilos a la hoja principal. 
+                    <b>¡No lo olvides!</b>
+                    <code>@import 'nombre-cool-archivo-parcial';</code>
+                    al inicio de tu archivo principal main.scss        
+                </p>
+            </article>
             <h4>Mixin</h4>
+            <hr>
         </section>
     </main>
 </body>

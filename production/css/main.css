@@ -11,5 +11,8 @@ main p, main li {
 main code {
   color: #d0398a;
 }
+main hr {
+  border-color: rgba(208, 57, 138, 0.5);
+}
 
 /*# sourceMappingURL=main.css.map */
