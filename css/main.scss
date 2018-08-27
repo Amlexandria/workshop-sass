@@ -1,11 +1,8 @@
-// Variables 
-// -------Project colors------
+// Import Section
 @import 'colors';
-@mixin fuente($value) {
-    font-family: $value;
-};
+@import 'mixins';
+
 main{
-    @include fuente("Times New Roman");
     color: $emphasis-color-one;
     background-color: $main-color;
     h1{
