@@ -9,4 +9,13 @@ $emphasis-color-two:#d0398a;
 main{
     color: $emphasis-color-one;
     background-color: $main-color;
+    h1{
+        color:$emphasis-color-two;
+    }
+    p,li{
+        color: $secondary-color;
+    }
+    code{
+        color: $emphasis-color-two;
+    }
 }

@@ -2,5 +2,14 @@ main {
   color: #679A9A;
   background-color: #fff;
 }
+main h1 {
+  color: #d0398a;
+}
+main p, main li {
+  color: #263547;
+}
+main code {
+  color: #d0398a;
+}
 
 /*# sourceMappingURL=main.css.map */

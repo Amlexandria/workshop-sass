@@ -130,10 +130,37 @@
                 </code>
 
             </article>
-            
+            <article id="nesting-sass">
+                <h4>Anidamiento || Nesting</h4>
+                <br>
+                <p>
+                        Sass permite anidar selectores en css de la misma forma jerarquica que lo hace HTML.
+                        Pero ten cuidado, con este gran poder, viene una gran responsabilidad.
+                        Debes tener cuidado de no sobreanidar elementos en tu CSS para no hacer complicada
+                        tu  hoja de estilos de mantener (sobreanidar puede ser una mala práctica)        
+                </p>
 
-            <h4>Anidamiento</h4>
-            <br>
+                <h6>¿Por qué la propiedad de <em>Nesting</em> te facilita la vida?</h6>
+                <ul>
+                    <li>Simplifica las reglas de especificidad de CSS</li>
+                    <li>Simplifica la modificación de elementos hijo dentro de elementos padres.</li>
+                </ul>
+                <code>
+                    main{ <br>
+                    <span class="white-text">__</span> color: $emphasis-color-one; <br>
+                    <span class="white-text">__</span>    background-color: $main-color;<br>
+                    <span class="white-text">__</span>    h1{<br>
+                    <span class="white-text">____</span>color:$emphasis-color-two;<br>
+                    <span class="white-text">__</span>  }<br>
+                    <span class="white-text">__</span>p{<br>
+                    <span class="white-text">____</span>color: $secondary-color;<br>
+                    <span class="white-text">__</span> }<br>
+                    <span class="white-text">__</span>code{<br>
+                        <span class="white-text">____</span>color: $emphasis-color-two;<br>
+                    <span class="white-text">__</span> }<br>
+                    }<br>                        
+                </code>
+            </article>
             <h4>Imports</h4>
             <br>
             <h4>Mixin</h4>
