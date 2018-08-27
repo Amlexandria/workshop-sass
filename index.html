@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link rel="stylesheet" href="production/css/main.css">
+    <link rel="stylesheet" href="../production/css/main.css">
     <title>WorkShop SASS </title>
 </head>
 <body>
@@ -78,16 +78,59 @@
                     <li>En la carpeta de tu proyecto build crea un archivo con extensión .scss (touch main.scss)</li>
                             <li>Este archivo será el que sea preprocesado con SASS</li>
                     <li>Ahora vamos a observar los cambios que se hagan en ese archivo principal</li>
-                    <quote>
-                        sass --watch main.scss:../production/css/main.css</li>
-                    </quote> 
+                    <quote id="create-main-css">
+                        sass --watch archivo_scss_o_sass_fuente.scss:archivo_destino_css_a_produccion.css
+                        sass --watch css/main.scss:production/css/main.css                    </quote> 
                     <sub>al hacer esto estamos creando un nuevo archivo main.css en la carpeta de producción de nuestro proyecto</sub>
                 </ol>
                 <h5>Ahora, podemos comenzar a escribir con sass los estilos de nuestro proyecto.</h5>
         </section>
         <section id="escribiedo-sass">
-            <h4>Variables</h4>
-            <br>
+            <article id="variables">
+                <h4>Variables</h4>
+                <br>
+                Las variables en SASS son una forma de almacenar valores de CSS 
+                que te gustaría reutilizar en algún momento. 
+                Puede ser cualquier cosa: colores, fuentes, valores predeterminados de pocisión, etc.
+                <code>
+                    <p>Sintaxis de SCSS</p>
+                    <br>
+                    <span class="white-text">__</span>$main-font:    Helvetica, sans-serif;<br>
+                    <span class="white-text">__</span>$primary-color: #333;<br>
+                
+                    <span class="white-text">__</span>body {<br>
+                        <span class="white-text">____</span>font: 100% $main-font;<br>
+                        <span class="white-text">____</span>color: $primary-color;<br>
+                    <span class="white-text">__</span>}
+                </code>
+                <h6>¿Por qué esto te facilita la vida?</h6>
+                <p>
+                    Que pasa si el equipo de diseño decide que es un buen momento para modificar 
+                    TODOS LOS COLORES del producto. Sin un preprocesador de css
+                    tendrías que moverte por cada linea de tus paginas de estilos
+                    para modificar a mano cada lugar donde los colores fueron utilizados.
+                </p>
+                <p>
+                    Al tener variables para los colores, basta con modificar el color en la declaración
+                    de la varibale y volver a <a href="#create-main-css">Construir tu archivo main.css</a>
+                    para que todos los colores del documento que hagan uso de ese valor
+                    se actualicen
+                </p>
+                <code>
+                    <p>Sintaxis de SCSS</p>
+                    <br>
+                    <span class="white-text">__</span>$main-color: #fff;<br>
+                    <span class="white-text">__</span>$secondary-color: #333;<br>
+                    <span class="white-text">__</span>$emphasis-color: #d0398a;<br>
+                
+                    <span class="white-text">__</span>main{<br>
+                        <span class="white-text">____</span>color: $main-color;<br>
+                        <span class="white-text">____</span>background-color: $secondary-color;<br>
+                        <span class="white-text">__</span>}
+                </code>
+
+            </article>
+            
 
             <h4>Anidamiento</h4>
             <br>

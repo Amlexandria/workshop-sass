@@ -1,3 +1,12 @@
-.blank{
-    color: white;
+// Variables 
+// -------Project colors------
+
+$main-color:#fff;
+$secondary-color:#263547;
+$emphasis-color-one:#679A9A;
+$emphasis-color-two:#d0398a;
+
+main{
+    color: $emphasis-color-one;
+    background-color: $main-color;
 }
